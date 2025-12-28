@@ -39,7 +39,7 @@ public class UnitTargetPathFinderImpl implements UnitTargetPathFinder {
         // задаём координаты рассматривавемой ячейки
         Edge activeCell = new Edge(attackUnit.getxCoordinate(), attackUnit.getyCoordinate());
 
-        while (targetDistance(activeCell, targetUnit) != 10) {
+        while (targetDistance(activeCell, targetUnit) != 0) {
             activeCell = (cellToGo(activeCell, targetUnit, existingUnitList));
             if (!activeCell.equals(new Edge(-1, -1)))
                 closedCells.add(activeCell);
